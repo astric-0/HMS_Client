@@ -21,7 +21,7 @@ function VideoModal() {
 	const { currFile, closeMovie } = useContext(FileContext);
 	return (
 		<Modal show={!!currFile} onClose={closeMovie}>
-			<Video src={make(currFile, HOME.GET.FILE)} />
+			<Video src={make(currFile, "/api/file/")} />
 		</Modal>
 	);
 }
